@@ -8,8 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.*;
-
 public class InventoryAllocatorTest {
 
     InventoryAllocator allocator = new InventoryAllocator();
@@ -69,16 +67,19 @@ public class InventoryAllocatorTest {
         Map<String, Integer> inventory1 = new HashMap<>();
         inventory1.put("apple", 1);
         Warehouse warehouse1 = new Warehouse("owd", inventory1);
+        warehouseDetails.add(warehouse1);
 
         //Expected
         List<Shipment> expected = new ArrayList();
         Map<String, Integer> shipmentDetails1 = new HashMap<>();
         shipmentDetails1.put("apple", 1);
-        Shipment shipment1 = new Shipment("owd", shipmentDetails1);
+        Shipment shipment1 = new Shipment();
+        shipment1.setWarehouseName("owd");
+        shipment1.setShipmentDetails(shipmentDetails1);
         expected.add(shipment1);
 
         //Actual
-        List actual = allocator.createShipments(order, warehouseDetails);
-        Assert.assertEquals(expected, actual);
+        List<Shipment> actual = allocator.createShipments(order, warehouseDetails);
+        Assert.assertEquals(expected.toString(), actual.toString());
     }
 }

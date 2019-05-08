@@ -1,16 +1,12 @@
 package inventory.allocator;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Shipment {
 
     String warehouseName;
-    Map<String, Integer> shipmentDetails;
-
-    public Shipment(String warehouseName, Map<String, Integer> shipmentDetails) {
-        this.warehouseName = warehouseName;
-        this.shipmentDetails = shipmentDetails;
-    }
+    Map<String, Integer> shipmentDetails = new HashMap<>();
 
     public String getWarehouseName() {
         return warehouseName;
@@ -26,5 +22,13 @@ public class Shipment {
 
     public void setShipmentDetails(Map<String, Integer> shipmentDetails) {
         this.shipmentDetails = shipmentDetails;
+    }
+
+    @Override
+    public String toString() {
+        return "Shipment{" +
+                "warehouseName='" + warehouseName + '\'' +
+                ", shipmentDetails=" + shipmentDetails +
+                '}';
     }
 }
