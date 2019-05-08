@@ -8,7 +8,9 @@ public class InventoryAllocator {
 
     public List createShipments(Map order, List warehouseDetails){
         List output = new ArrayList();
-
+        if(null == order || null == warehouseDetails){
+            return output;
+        }
         return output;
     }
 }
