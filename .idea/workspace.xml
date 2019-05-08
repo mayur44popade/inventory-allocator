@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a04010-b6b6-449e-b2c8-49f2f093856d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/inventory/allocator/InventoryAllocator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/inventory/allocator/InventoryAllocator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/inventory/allocator/InventoryAllocatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inventory/allocator/InventoryAllocatorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/allocator/Shipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/allocator/Shipment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,23 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
-              <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+              <caret line="148" column="5" lean-forward="true" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,12 +109,12 @@
         <option value="$PROJECT_DIR$/src/main/java/inventory/allocator/Warehouse.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/inventory/allocator/Shipment.java" />
-        <option value="$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -211,22 +204,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.InventoryAllocatorTest">
-    <configuration name="AppTest.testAppHasAGreeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory-allocator.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="inventory.allocator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="inventory.allocator" />
-      <option name="MAIN_CLASS_NAME" value="inventory.allocator.AppTest" />
-      <option name="METHOD_NAME" value="testAppHasAGreeting" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="InventoryAllocatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="inventory-allocator.test" />
       <extension name="coverage">
@@ -258,6 +235,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InventoryAllocatorTest.handlesExactMatchWithMultipleKeysInOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory-allocator.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inventory.allocator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="inventory.allocator" />
+      <option name="MAIN_CLASS_NAME" value="inventory.allocator.InventoryAllocatorTest" />
+      <option name="METHOD_NAME" value="handlesExactMatchWithMultipleKeysInOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InventoryAllocatorTest.handlesNotEnoughInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="inventory-allocator.test" />
       <extension name="coverage">
@@ -274,7 +267,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryAllocatorTest.handlesNullInputs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryAllocatorTest.handlesSplitAcrossInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="inventory-allocator.test" />
       <extension name="coverage">
         <pattern>
@@ -284,7 +277,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="inventory.allocator" />
       <option name="MAIN_CLASS_NAME" value="inventory.allocator.InventoryAllocatorTest" />
-      <option name="METHOD_NAME" value="handlesNullInputs" />
+      <option name="METHOD_NAME" value="handlesSplitAcrossInventory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -293,10 +286,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.InventoryAllocatorTest" />
+        <item itemvalue="JUnit.InventoryAllocatorTest.handlesExactMatchWithMultipleKeysInOrder" />
+        <item itemvalue="JUnit.InventoryAllocatorTest.handlesSplitAcrossInventory" />
         <item itemvalue="JUnit.InventoryAllocatorTest.handlesExactMatch" />
         <item itemvalue="JUnit.InventoryAllocatorTest.handlesNotEnoughInventory" />
-        <item itemvalue="JUnit.InventoryAllocatorTest.handlesNullInputs" />
-        <item itemvalue="JUnit.AppTest.testAppHasAGreeting" />
       </list>
     </recent_temporary>
   </component>
@@ -314,35 +307,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InventoryAllocatorTest_handlesExactMatch - 2019.05.07 at 22h 45m 23s.xml">
-      <configuration name="InventoryAllocatorTest.handlesExactMatch" configurationId="JUnit" />
+    <history-entry file="InventoryAllocatorTest_handlesSplitAcrossInventory - 2019.05.07 at 23h 04m 47s.xml">
+      <configuration name="InventoryAllocatorTest.handlesSplitAcrossInventory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesExactMatch - 2019.05.07 at 22h 45m 42s.xml">
-      <configuration name="InventoryAllocatorTest.handlesExactMatch" configurationId="JUnit" />
+    <history-entry file="InventoryAllocatorTest_handlesSplitAcrossInventory - 2019.05.07 at 23h 05m 32s.xml">
+      <configuration name="InventoryAllocatorTest.handlesSplitAcrossInventory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesExactMatch - 2019.05.07 at 22h 46m 20s.xml">
-      <configuration name="InventoryAllocatorTest.handlesExactMatch" configurationId="JUnit" />
+    <history-entry file="InventoryAllocatorTest_handlesSplitAcrossInventory - 2019.05.07 at 23h 05m 55s.xml">
+      <configuration name="InventoryAllocatorTest.handlesSplitAcrossInventory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryAllocatorTest - 2019.05.07 at 22h 46m 26s.xml">
+    <history-entry file="InventoryAllocatorTest_handlesSplitAcrossInventory - 2019.05.07 at 23h 07m 11s.xml">
+      <configuration name="InventoryAllocatorTest.handlesSplitAcrossInventory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryAllocatorTest - 2019.05.07 at 23h 07m 46s.xml">
       <configuration name="InventoryAllocatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesExactMatch - 2019.05.07 at 22h 52m 36s.xml">
-      <configuration name="InventoryAllocatorTest.handlesExactMatch" configurationId="JUnit" />
+    <history-entry file="InventoryAllocatorTest_handlesExactMatchWithMultipleKeysInOrder - 2019.05.07 at 23h 10m 20s.xml">
+      <configuration name="InventoryAllocatorTest.handlesExactMatchWithMultipleKeysInOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesNotEnoughInventory - 2019.05.07 at 22h 52m 44s.xml">
-      <configuration name="InventoryAllocatorTest.handlesNotEnoughInventory" configurationId="JUnit" />
+    <history-entry file="InventoryAllocatorTest_handlesExactMatchWithMultipleKeysInOrder - 2019.05.07 at 23h 16m 55s.xml">
+      <configuration name="InventoryAllocatorTest.handlesExactMatchWithMultipleKeysInOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesExactMatch - 2019.05.07 at 22h 53m 35s.xml">
-      <configuration name="InventoryAllocatorTest.handlesExactMatch" configurationId="JUnit" />
+    <history-entry file="InventoryAllocatorTest_handlesExactMatchWithMultipleKeysInOrder - 2019.05.07 at 23h 25m 00s.xml">
+      <configuration name="InventoryAllocatorTest.handlesExactMatchWithMultipleKeysInOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesExactMatch - 2019.05.07 at 22h 54m 02s.xml">
-      <configuration name="InventoryAllocatorTest.handlesExactMatch" configurationId="JUnit" />
+    <history-entry file="InventoryAllocatorTest_handlesExactMatchWithMultipleKeysInOrder - 2019.05.07 at 23h 25m 03s.xml">
+      <configuration name="InventoryAllocatorTest.handlesExactMatchWithMultipleKeysInOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesNotEnoughInventory - 2019.05.07 at 22h 54m 55s.xml">
-      <configuration name="InventoryAllocatorTest.handlesNotEnoughInventory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesNotEnoughInventory - 2019.05.07 at 22h 55m 17s.xml">
-      <configuration name="InventoryAllocatorTest.handlesNotEnoughInventory" configurationId="JUnit" />
+    <history-entry file="InventoryAllocatorTest - 2019.05.07 at 23h 25m 31s.xml">
+      <configuration name="InventoryAllocatorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -378,6 +371,36 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/inventory/allocator/App.java">
@@ -452,6 +475,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="1492" column="22" selection-start-line="1492" selection-start-column="22" selection-end-line="1492" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/inventory/allocator/Shipment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -462,20 +492,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inventory/allocator/InventoryAllocator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+        <state relative-caret-position="301">
+          <caret line="148" column="5" lean-forward="true" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

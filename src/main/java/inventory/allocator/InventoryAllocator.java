@@ -1,9 +1,6 @@
 package inventory.allocator;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class InventoryAllocator {
 
@@ -25,7 +22,7 @@ public class InventoryAllocator {
                     if(order.get(itemName) == inventory.get(itemName)){
                         shipmentDetails.put(itemName, order.get(itemName));
                         order.remove(itemName);
-                        inventory.remove(itemName);
+                        inventory.put(itemName, 0);
                     }else if(order.get(itemName) < inventory.get(itemName)){
                         shipmentDetails.put(itemName, order.get(itemName));
                         inventory.put(itemName, inventory.get(itemName)-order.get(itemName));
@@ -34,17 +31,18 @@ public class InventoryAllocator {
                         if(inventory.get(itemName) != 0){
                             shipmentDetails.put(itemName, inventory.get(itemName));
                             order.put(itemName, order.get(itemName)-inventory.get(itemName));
-                            inventory.remove(itemName);
+                            inventory.put(itemName, 0);
                         }
                     }
                 }
                 shipment.setShipmentDetails(shipmentDetails);
-                if(shipment.shipmentDetails.size() != 0){
-                    finalShipment.add(shipment);
-                }
+
                 if(order.size() == 0){
                     break;
                 }
+            }
+            if(shipment.shipmentDetails.size() != 0){
+                finalShipment.add(shipment);
             }
             if(order.size() == 0){
                 break;

@@ -100,4 +100,51 @@ public class InventoryAllocatorTest {
         Assert.assertEquals(expected, actual.toString());
     }
 
+    @Test
+    public void handlesSplitAcrossInventory(){
+        //Setup
+        Map<String, Integer> order = new HashMap();
+        order.put("apple", 10);
+        List<Warehouse> warehouseDetails = new ArrayList();
+        Map<String, Integer> inventory1 = new HashMap<>();
+        inventory1.put("apple", 5);
+        Warehouse warehouse1 = new Warehouse("owd", inventory1);
+        warehouseDetails.add(warehouse1);
+        Map<String, Integer> inventory2 = new HashMap<>();
+        inventory2.put("apple", 5);
+        Warehouse warehouse2 = new Warehouse("dm", inventory2);
+        warehouseDetails.add(warehouse2);
+
+        //Actual
+        List<Shipment> actual = new ArrayList();
+        actual = allocator.createShipments(order, warehouseDetails);
+
+        //Expected
+        String expected= "[{owd: {apple=5}}, {dm: {apple=5}}]";
+
+        Assert.assertEquals(expected, actual.toString());
+    }
+
+    @Test
+    public void handlesExactMatchWithMultipleKeysInOrder(){
+        //Setup
+        Map<String, Integer> order = new HashMap();
+        order.put("apple", 10);
+        order.put("banana", 10);
+        List<Warehouse> warehouseDetails = new ArrayList();
+        Map<String, Integer> inventory1 = new HashMap<>();
+        inventory1.put("apple", 10);
+        inventory1.put("banana", 10);
+        Warehouse warehouse1 = new Warehouse("owd", inventory1);
+        warehouseDetails.add(warehouse1);
+
+        //Actual
+        List<Shipment> actual = new ArrayList();
+        actual = allocator.createShipments(order, warehouseDetails);
+
+        //Expected
+        String expected= "[{owd: {banana=10, apple=10}}]";
+
+        Assert.assertEquals(expected, actual.toString());
+    }
 }
