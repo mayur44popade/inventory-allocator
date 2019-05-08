@@ -69,17 +69,35 @@ public class InventoryAllocatorTest {
         Warehouse warehouse1 = new Warehouse("owd", inventory1);
         warehouseDetails.add(warehouse1);
 
+        //Actual
+        List<Shipment> actual = new ArrayList();
+        actual = allocator.createShipments(order, warehouseDetails);
+
         //Expected
-        List<Shipment> expected = new ArrayList();
-        Map<String, Integer> shipmentDetails1 = new HashMap<>();
-        shipmentDetails1.put("apple", 1);
-        Shipment shipment1 = new Shipment();
-        shipment1.setWarehouseName("owd");
-        shipment1.setShipmentDetails(shipmentDetails1);
-        expected.add(shipment1);
+        String expected= "[{owd: {apple=1}}]";
+
+        Assert.assertEquals(expected, actual.toString());
+    }
+
+    @Test
+    public void handlesNotEnoughInventory(){
+        //Setup
+        Map<String, Integer> order = new HashMap();
+        order.put("apple", 1);
+        List<Warehouse> warehouseDetails = new ArrayList();
+        Map<String, Integer> inventory1 = new HashMap<>();
+        inventory1.put("apple", 0);
+        Warehouse warehouse1 = new Warehouse("owd", inventory1);
+        warehouseDetails.add(warehouse1);
 
         //Actual
-        List<Shipment> actual = allocator.createShipments(order, warehouseDetails);
-        Assert.assertEquals(expected.toString(), actual.toString());
+        List<Shipment> actual = new ArrayList();
+        actual = allocator.createShipments(order, warehouseDetails);
+
+        //Expected
+        String expected= "[]";
+
+        Assert.assertEquals(expected, actual.toString());
     }
+
 }

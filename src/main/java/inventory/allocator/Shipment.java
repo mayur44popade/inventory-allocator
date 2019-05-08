@@ -26,9 +26,9 @@ public class Shipment {
 
     @Override
     public String toString() {
-        return "Shipment{" +
-                "warehouseName='" + warehouseName + '\'' +
-                ", shipmentDetails=" + shipmentDetails +
+        return "{" +
+                "" + warehouseName +
+                ": " + shipmentDetails +
                 '}';
     }
 }

@@ -24,12 +24,30 @@ public class InventoryAllocator {
                 if(order.containsKey(itemName)){
                     if(order.get(itemName) == inventory.get(itemName)){
                         shipmentDetails.put(itemName, order.get(itemName));
+                        order.remove(itemName);
+                        inventory.remove(itemName);
+                    }else if(order.get(itemName) < inventory.get(itemName)){
+                        shipmentDetails.put(itemName, order.get(itemName));
+                        inventory.put(itemName, inventory.get(itemName)-order.get(itemName));
+                        order.remove(itemName);
+                    }else{
+                        if(inventory.get(itemName) != 0){
+                            shipmentDetails.put(itemName, inventory.get(itemName));
+                            order.put(itemName, order.get(itemName)-inventory.get(itemName));
+                            inventory.remove(itemName);
+                        }
                     }
                 }
                 shipment.setShipmentDetails(shipmentDetails);
                 if(shipment.shipmentDetails.size() != 0){
                     finalShipment.add(shipment);
                 }
+                if(order.size() == 0){
+                    break;
+                }
+            }
+            if(order.size() == 0){
+                break;
             }
         }
 
