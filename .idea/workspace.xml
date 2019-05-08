@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="197" column="36" lean-forward="true" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+            <state relative-caret-position="250">
+              <caret line="281" column="80" selection-start-line="281" selection-start-column="80" selection-end-line="281" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InventoryAllocatorTest.handlesGeneralScenarioWithRandomlyDistributedItems">
+  <component name="RunManager" selected="JUnit.InventoryAllocatorTest">
     <configuration name="InventoryAllocatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="inventory-allocator.test" />
       <extension name="coverage">
@@ -236,22 +236,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryAllocatorTest.handlesExactMatchWithMultipleKeysInOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory-allocator.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="inventory.allocator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="inventory.allocator" />
-      <option name="MAIN_CLASS_NAME" value="inventory.allocator.InventoryAllocatorTest" />
-      <option name="METHOD_NAME" value="handlesExactMatchWithMultipleKeysInOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithEquallyDistributedItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="inventory-allocator.test" />
       <extension name="coverage">
@@ -263,6 +247,38 @@
       <option name="PACKAGE_NAME" value="inventory.allocator" />
       <option name="MAIN_CLASS_NAME" value="inventory.allocator.InventoryAllocatorTest" />
       <option name="METHOD_NAME" value="handlesGeneralScenarioWithEquallyDistributedItems" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithOneItemFromEach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory-allocator.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inventory.allocator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="inventory.allocator" />
+      <option name="MAIN_CLASS_NAME" value="inventory.allocator.InventoryAllocatorTest" />
+      <option name="METHOD_NAME" value="handlesGeneralScenarioWithOneItemFromEach" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithOneItemFromEachWareHouse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory-allocator.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inventory.allocator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="inventory.allocator" />
+      <option name="MAIN_CLASS_NAME" value="inventory.allocator.InventoryAllocatorTest" />
+      <option name="METHOD_NAME" value="handlesGeneralScenarioWithOneItemFromEachWareHouse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -284,29 +300,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryAllocatorTest.handlesSplitAcrossInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory-allocator.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="inventory.allocator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="inventory.allocator" />
-      <option name="MAIN_CLASS_NAME" value="inventory.allocator.InventoryAllocatorTest" />
-      <option name="METHOD_NAME" value="handlesSplitAcrossInventory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InventoryAllocatorTest.handlesGeneralScenarioWithRandomlyDistributedItems" />
         <item itemvalue="JUnit.InventoryAllocatorTest" />
+        <item itemvalue="JUnit.InventoryAllocatorTest.handlesGeneralScenarioWithOneItemFromEach" />
+        <item itemvalue="JUnit.InventoryAllocatorTest.handlesGeneralScenarioWithOneItemFromEachWareHouse" />
+        <item itemvalue="JUnit.InventoryAllocatorTest.handlesGeneralScenarioWithRandomlyDistributedItems" />
         <item itemvalue="JUnit.InventoryAllocatorTest.handlesGeneralScenarioWithEquallyDistributedItems" />
-        <item itemvalue="JUnit.InventoryAllocatorTest.handlesExactMatchWithMultipleKeysInOrder" />
-        <item itemvalue="JUnit.InventoryAllocatorTest.handlesSplitAcrossInventory" />
       </list>
     </recent_temporary>
   </component>
@@ -324,15 +324,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InventoryAllocatorTest_handlesGeneralScenarioWithEquallyDistributedItems - 2019.05.07 at 23h 38m 35s.xml">
-      <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithEquallyDistributedItems" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesGeneralScenarioWithEquallyDistributedItems - 2019.05.07 at 23h 39m 38s.xml">
-      <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithEquallyDistributedItems" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InventoryAllocatorTest_handlesGeneralScenarioWithEquallyDistributedItems - 2019.05.07 at 23h 39m 54s.xml">
-      <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithEquallyDistributedItems" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="InventoryAllocatorTest_handlesGeneralScenarioWithEquallyDistributedItems - 2019.05.07 at 23h 42m 18s.xml">
       <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithEquallyDistributedItems" configurationId="JUnit" />
     </history-entry>
@@ -353,6 +344,15 @@
     </history-entry>
     <history-entry file="InventoryAllocatorTest_handlesGeneralScenarioWithRandomlyDistributedItems - 2019.05.07 at 23h 51m 44s.xml">
       <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithRandomlyDistributedItems" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryAllocatorTest - 2019.05.07 at 23h 53m 44s.xml">
+      <configuration name="InventoryAllocatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryAllocatorTest_handlesGeneralScenarioWithOneItemFromEachWareHouse - 2019.05.07 at 23h 54m 47s.xml">
+      <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithOneItemFromEachWareHouse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryAllocatorTest_handlesGeneralScenarioWithOneItemFromEach - 2019.05.07 at 23h 56m 17s.xml">
+      <configuration name="InventoryAllocatorTest.handlesGeneralScenarioWithOneItemFromEach" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -512,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/inventory/allocator/InventoryAllocatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="197" column="36" lean-forward="true" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+        <state relative-caret-position="250">
+          <caret line="281" column="80" selection-start-line="281" selection-start-column="80" selection-end-line="281" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

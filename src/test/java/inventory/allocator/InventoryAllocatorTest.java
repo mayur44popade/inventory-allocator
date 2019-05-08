@@ -211,7 +211,75 @@ public class InventoryAllocatorTest {
         actual = allocator.createShipments(order, warehouseDetails);
 
         //Expected
-        String expected= "[{dm: {banana=5, orange=5, apple=5}}, {owd: {banana=5, orange=5, apple=5}}]";
+        String expected= "[{dm: {banana=1, orange=1, apple=2}}, {owd: {banana=1, orange=2, apple=1}}, {pix: {orange=4, apple=2}}]";
+
+        Assert.assertEquals(expected, actual.toString());
+    }
+
+    @Test
+    public void handlesGeneralScenarioWithOneItemFromEachWareHouse(){
+        //Setup
+        Map<String, Integer> order = new HashMap();
+        order.put("apple", 5);
+        order.put("banana", 2);
+        order.put("orange", 7);
+        List<Warehouse> warehouseDetails = new ArrayList();
+        Map<String, Integer> inventory1 = new HashMap<>();
+        inventory1.put("apple", 5);
+        inventory1.put("banana", 1);
+        inventory1.put("orange", 1);
+        Warehouse warehouse1 = new Warehouse("dm", inventory1);
+        warehouseDetails.add(warehouse1);
+        Map<String, Integer> inventory2 = new HashMap<>();
+        inventory2.put("apple", 1);
+        inventory2.put("banana", 1);
+        inventory2.put("orange", 2);
+        Warehouse warehouse2 = new Warehouse("owd", inventory2);
+        warehouseDetails.add(warehouse2);
+        Map<String, Integer> inventory3 = new HashMap<>();
+        inventory3.put("apple", 2);
+        inventory3.put("banana", 1);
+        inventory3.put("orange", 10);
+        Warehouse warehouse3 = new Warehouse("pix", inventory3);
+        warehouseDetails.add(warehouse3);
+
+        //Actual
+        List<Shipment> actual = new ArrayList();
+        actual = allocator.createShipments(order, warehouseDetails);
+
+        //Expected
+        String expected= "[{dm: {banana=1, orange=1, apple=5}}, {owd: {banana=1, orange=2}}, {pix: {orange=4}}]";
+
+        Assert.assertEquals(expected, actual.toString());
+    }
+
+    @Test
+    public void handlesGeneralScenarioWithOneItemFromEach(){
+        //Setup
+        Map<String, Integer> order = new HashMap();
+        order.put("apple", 5);
+        order.put("banana", 2);
+        order.put("orange", 7);
+        List<Warehouse> warehouseDetails = new ArrayList();
+        Map<String, Integer> inventory1 = new HashMap<>();
+        inventory1.put("apple", 10);
+        Warehouse warehouse1 = new Warehouse("dm", inventory1);
+        warehouseDetails.add(warehouse1);
+        Map<String, Integer> inventory2 = new HashMap<>();
+        inventory2.put("orange", 10);
+        Warehouse warehouse2 = new Warehouse("owd", inventory2);
+        warehouseDetails.add(warehouse2);
+        Map<String, Integer> inventory3 = new HashMap<>();
+        inventory3.put("banana", 10);
+        Warehouse warehouse3 = new Warehouse("pix", inventory3);
+        warehouseDetails.add(warehouse3);
+
+        //Actual
+        List<Shipment> actual = new ArrayList();
+        actual = allocator.createShipments(order, warehouseDetails);
+
+        //Expected
+        String expected= "[{dm: {apple=5}}, {owd: {orange=7}}, {pix: {banana=2}}]";
 
         Assert.assertEquals(expected, actual.toString());
     }
